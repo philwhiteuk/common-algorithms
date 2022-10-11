@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "examples of common data structures and problem-solving algorithms",
   "scripts": {
-    "test": "jest ./src/*.test.ts"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,9 @@
     "prettier": "^2.7.1"
   },
   "jest": {
-    "preset": "ts-jest"
+    "preset": "ts-jest",
+    "testMatch": [
+      "**/*.test.ts"
+    ]
   }
 }
