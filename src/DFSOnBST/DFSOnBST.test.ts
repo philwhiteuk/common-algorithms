@@ -1,5 +1,5 @@
 import dfs from "./DFSOnBST";
-import { tree } from "./helpers/tree";
+import { tree } from "../helpers/tree";
 
 test("DFS on BST", function () {
   expect(dfs(tree, 45)).toEqual(true);
