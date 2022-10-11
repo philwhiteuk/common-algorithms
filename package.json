@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "examples of common data structures and problem-solving algorithms",
   "scripts": {
+    "pretty": "npx prettier -w ./src",
     "test": "jest"
   },
   "repository": {
