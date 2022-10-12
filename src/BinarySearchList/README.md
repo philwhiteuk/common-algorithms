@@ -2,11 +2,12 @@
 
 ![Binary Search](./diagram.png)
 
-    ✓ binary search array (3 ms)
-    ✓ binary search array performance 10x
-    ✓ binary search array performance 100x
-    ✓ binary search array performance 1000x
-    ✓ binary search array performance 10000x (1 ms)
-    ✓ binary search array performance 100000x (7 ms)
-    ✓ binary search array performance 1000000x (72 ms)
-    ✓ binary search array performance 10000000x (662 ms)
+    ✓ binary search array (2 ms)
+    ✓ binary search array performance test 10
+    ✓ binary search array performance test 100 (1 ms)
+    ✓ binary search array performance test 1000
+    ✓ binary search array performance test 10000
+    ✓ binary search array performance test 100000
+    ✓ binary search array performance test 1000000
+    ✓ binary search array performance test 10000000
+    ✓ binary search array performance test 100000000 (1 ms)

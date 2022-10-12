@@ -1,4 +1,5 @@
 import binary_fn from "./BinarySearchList";
+import { arrayOfLength } from "../helpers/arrayOfLength";
 
 test("binary search array", function () {
   const foo = [1, 3, 4, 69, 71, 81, 90, 99, 420, 1337, 69420];
@@ -10,11 +11,11 @@ test("binary search array", function () {
   expect(binary_fn(foo, 0)).toEqual(false);
 });
 
-test.each([10, 100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000])(
-  `binary search array performance %px`,
+[10, 100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000, 100_000_000].forEach(
   (length) => {
-    const foo = Array.from({ length }, () => 1);
-
-    binary_fn(foo, 0);
+    const foo = arrayOfLength(length, 1);
+    test(`binary search array performance test ${length}`, () => {
+      binary_fn(foo, 0);
+    });
   }
 );

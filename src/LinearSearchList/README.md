@@ -3,10 +3,11 @@
 ![Linear Search](./diagram.png)
 
     ✓ linear search array (3 ms)
-    ✓ linear search array performance 10x
-    ✓ linear search array performance 100x
-    ✓ linear search array performance 1000x
-    ✓ linear search array performance 10000x (1 ms)
-    ✓ linear search array performance 100000x (7 ms)
-    ✓ linear search array performance 1000000x (73 ms)
-    ✓ linear search array performance 10000000x (725 ms)
+    ✓ linear search array peformance test 10
+    ✓ linear search array peformance test 100
+    ✓ linear search array peformance test 1000
+    ✓ linear search array peformance test 10000 (1 ms)
+    ✓ linear search array peformance test 100000 (2 ms)
+    ✓ linear search array peformance test 1000000 (2 ms)
+    ✓ linear search array peformance test 10000000 (17 ms)
+    ✓ linear search array peformance test 100000000 (173 ms)
