@@ -1,3 +1,3 @@
-export function arrayOfLength(length: number, value: any = 1) {
-  return Array.from({ length }, () => value);
+export function arrayOfLength(length: number, mapfn: () => any = () => 1) {
+  return Array.from({ length }, mapfn);
 }

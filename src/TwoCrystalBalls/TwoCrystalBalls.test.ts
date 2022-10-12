@@ -15,7 +15,7 @@ test("two crystal balls", function () {
 
 [10, 100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000, 100_000_000].forEach(
   (length) => {
-    const foo = arrayOfLength(length, true);
+    const foo = arrayOfLength(length, () => true);
     test(`two crystal balls peformance test ${length}`, () => {
       two_crystal_balls(foo);
     });

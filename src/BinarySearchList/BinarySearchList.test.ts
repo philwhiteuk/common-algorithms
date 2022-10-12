@@ -13,7 +13,7 @@ test("binary search array", function () {
 
 [10, 100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000, 100_000_000].forEach(
   (length) => {
-    const foo = arrayOfLength(length, 1);
+    const foo = arrayOfLength(length, () => 1);
     test(`binary search array performance test ${length}`, () => {
       binary_fn(foo, 0);
     });
