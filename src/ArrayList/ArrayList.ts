@@ -8,38 +8,47 @@ export default class ArrayList<T> {
   }
 
   append(item: T): void {
-    if (this.length < this.capacity) {
-      this.items[this.length] = item;
-      this.length++;
+    if (this.length >= this.capacity) {
+      this.capacity *= 2;
+
+      const oldItems = this.items;
+      this.items = new Array(this.capacity);
+
+      for (let iter = 0; iter < oldItems.length; ++iter) {
+        this.items[iter] = oldItems[iter];
+      }
     }
+
+    this.items[this.length] = item;
+    this.length++;
   }
 
   prepend(item: T): void {
-    if (this.length < this.capacity) {
-      const oldItems = this.items;
-      this.items = new Array(this.capacity);
+    const oldItems = this.items;
+    this.items = new Array(
+      this.length >= this.capacity ? (this.capacity *= 2) : this.capacity
+    );
 
-      this.items[0] = item;
-      for (let iter = 1; iter < oldItems.length; ++iter) {
-        this.items[iter] = oldItems[iter - 1];
-      }
-
-      this.length++;
+    this.items[0] = item;
+    for (let iter = 1; iter < oldItems.length; ++iter) {
+      this.items[iter] = oldItems[iter - 1];
     }
+
+    this.length++;
   }
 
   insertAt(item: T, idx: number): void {
-    if (this.length < this.capacity) {
-      const oldItems = this.items;
-      this.items = new Array(this.capacity);
+    const oldItems = this.items;
+    this.items = new Array(
+      this.length >= this.capacity ? (this.capacity *= 2) : this.capacity
+    );
 
-      this.items[idx] = item;
-      for (let iter = idx + 1; iter < oldItems.length; ++iter) {
-        this.items[iter] = oldItems[iter - 1];
-      }
-
-      this.length++;
+    this.items[idx] = item;
+    for (let iter = idx + 1; iter < oldItems.length; ++iter) {
+      this.items[iter] = oldItems[iter - 1];
     }
+
+    this.length++;
   }
 
   get(idx: number): T | undefined {
