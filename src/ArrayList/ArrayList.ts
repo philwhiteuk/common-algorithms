@@ -1,4 +1,4 @@
-export default class ArrayList<T> {
+export default class ArrayList<T> implements List<T> {
   length: number;
   private items: Array<T>;
 
