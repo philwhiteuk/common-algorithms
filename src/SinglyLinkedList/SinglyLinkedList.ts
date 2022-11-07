@@ -50,7 +50,7 @@ export default class SinglyLinkedList<T> implements List<T> {
       for (let i = 0; i < idx; ++i) {
         curr = curr?.next ? curr?.next : curr;
       }
-      curr.next = curr;
+      curr.next = { value: curr.value, next: curr.next };
       curr.value = item;
     }
   }
